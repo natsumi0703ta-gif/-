@@ -1,0 +1,35 @@
+@use "mixin" ;
+
+.question {
+    width: 70%;
+    margin: 0 auto;
+    background-color: #faf6f6;
+    padding: 50px;
+    border: solid;
+
+    @include mixin.sp {
+        width: 86%;
+        padding: 40px 20px;
+    }
+
+    dt {
+        font-size: 1.7rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    dd {
+        font-size: 1.2rem;
+        margin-bottom: 60px;
+        margin-left: 40px;
+
+        @include mixin.sp{
+            margin-left: 10px;
+            font-size: 1rem;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

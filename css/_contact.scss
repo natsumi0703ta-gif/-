@@ -1,0 +1,79 @@
+@use "mixin" ;
+
+.contact {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+
+    @include mixin.sp {
+        width: 100%;
+    }
+
+    .steps {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+        padding: 0;
+
+        li {
+            margin-inline: 15px;
+            color: #c5c5c5;
+
+            .ja {
+                font-size: 0.8rem;
+            }
+
+
+            &.active {
+                color: #C2A678;
+                font-weight: bold;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.contact-form {
+
+    dt {
+        font-size: 1.4rem;
+        margin-top: 30px;
+        text-align: left;
+    }
+
+    dd {
+        background-color: #ffffff;
+        padding: 10px;
+        color: #111;
+        margin-top: 5px;
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+        }
+
+        textarea {
+            height: 150px;
+        }
+    }
+}
+
+.confirm-btn {
+    text-align: center;
+    margin-top: 50px;
+
+    a,button {
+        color: #FFFDF9;
+        display: inline-block;
+        padding: 10px 60px;
+        background-color: #C2A678;
+        cursor: pointer;
+    }
+
+    .ja {
+            font-size: 0.8rem;
+    }
+}

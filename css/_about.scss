@@ -1,0 +1,198 @@
+@use "mixin" ;
+
+
+/* ---- history ---- */
+
+.header-about p {
+    width: 100%;
+    font-family: "Sawarabi Mincho" , serif;
+    line-height: 50px;
+    text-align: center;
+    font-size: 1.1rem;
+    padding-top: 300px;
+    color: #454545;
+
+    @include mixin.sp {
+        display: none;
+    }
+}
+
+.about-content-title {
+    text-align: center;
+    padding-block: 100px;
+    font-size: 6rem;
+    margin-bottom: 20px;
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+
+
+    @include mixin.sp {
+        font-size: 5rem;
+        padding-top: 100px;
+        padding-bottom: 30px;
+    }
+}
+
+.history {
+    border-left: solid 15px #444444;
+
+    @include mixin.sp {
+        border-left: none;
+    }
+
+    .history-inner {
+        width: 100%;
+        display: flex;
+        margin-bottom: 80px;
+
+        @include mixin.sp {
+            flex-direction: column;
+        }
+
+        .left {
+            width: 50%;
+            margin-inline: 30px;
+
+            @include mixin.sp {
+               display: contents;
+            }
+
+            .year {
+                font-size: 7rem;
+                font-family: "Stick No Bills", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 400;
+                font-style: normal;
+
+                @include mixin.sp {
+                    order: 1;
+                    margin: 0 auto;
+                    width: 90%;
+                    font-size: 8rem;
+                    text-align: center;
+                    padding-bottom: 10px;
+                }
+            }
+
+            .number {
+                letter-spacing: 0.6rem;
+            }
+
+
+
+            .text {
+                font-size: 1.1rem;
+                line-height: 2;
+
+                @include mixin.sp {
+                    order: 3;
+                    width: 90%;
+                    margin: 0 auto;
+                    padding-top: 20px;
+                }
+            }
+        }
+
+        .right{
+            width: 45%;   
+
+            @include mixin.sp {
+                order: 2;
+                width: 90%;
+                margin: 0 auto;
+   
+            }
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            background-color:  #444444;
+            height: 3px;
+            width: 180px;
+            margin-top: 65px;
+
+            @include mixin.sp {
+                display: none;
+            }
+        }
+    }
+}
+
+
+
+/* ----person---- */
+
+.person {
+    padding-bottom: 240px;
+    @include mixin.sp {
+        padding-bottom: 40px;
+    }
+    
+
+    .content-person {
+        display: flex;
+        margin-top: 100px;
+
+        @include mixin.sp {
+            flex-direction: column;
+            margin-top: 40px;
+        }
+
+        .person1, .person2 {
+            width: 50%;
+            display: flex;
+
+            @include mixin.sp {
+                width: 100%;
+                flex-direction: column;
+            }
+
+            .text-person {
+                width: 55%;
+                margin-inline: 30px;
+
+                @include mixin.sp {
+                    width: 90%;
+                    margin: 0 auto;
+                    text-align: center;
+                    margin-bottom: 50px;
+                }
+
+                .name-ja {
+                    font-size: 1.8rem;
+                    font-family: "Sawarabi Mincho" , serif;
+                    font-weight: bold;
+                }
+
+                .name-en {
+                    font-size: 1.2rem;
+                    font-family: "Sawarabi Mincho" , serif;
+                    font-weight: bold;
+                }
+
+                .career {
+                    margin-block: 20px;
+                }
+            }
+
+            img {
+                width: 45%;
+                object-fit: cover;
+
+                @include mixin.sp {
+                    border-radius: 50%;
+                    margin: 0 auto;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
+
+
+
+.person2 .text-person {
+    margin-right: 0;
+}
+

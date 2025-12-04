@@ -1,0 +1,25 @@
+@use "mixin" ;
+
+.article {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 80px;
+
+    @include mixin.sp {
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .date {
+        margin-block: 10px;
+    }
+
+    .article-title {
+        font-size: 1.6rem;
+        font-family: "Sawarabi Mincho" , serif; 
+        letter-spacing: 2px;
+
+        @include mixin.sp {
+            letter-spacing: 1px;
+        }
+    }
+}

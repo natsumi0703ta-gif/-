@@ -1,0 +1,55 @@
+@use "mixin" ;
+
+.store-list {
+    text-align: left;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 32px;
+    font-family: "Sawarabi Mincho" , serif;
+
+    @include mixin.sp {
+        grid-template-columns: repeat(1,1fr);
+        gap: 60px;
+    }
+
+    .store-name {
+        font-size: 2.2rem;
+        margin-block: 5px;
+
+        @include mixin.sp {
+            font-size: 2.4rem;
+        }
+    }
+
+    .address {
+        font-size: 0.8rem;
+        @include mixin.sp {
+            font-size: 1.2rem;
+        }
+    }
+
+    .store-info {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        @include mixin.sp {
+            margin-top: 10px;
+        }
+    }
+}
+
+
+.store3 .store-info,.store6 .store-info {
+    margin-top: 30px;
+}
+
+.store-info .instagram img {
+    width: 20px;
+}
+
+.store-info .googlemap {
+    border-bottom: solid;
+}
